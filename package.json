@@ -1,0 +1,31 @@
+{
+  "name": "fbdownloader",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "app": "node ./app.js",
+    "lint": "standard --fix"
+  },
+  "dependencies": {
+    "ansi.js": "^0.0.5",
+    "dotenv": "^6.0.0",
+    "end-with": "^1.0.2",
+    "express": "^4.16.3",
+    "fb": "^2.0.0",
+    "fbgraph": "^1.4.4",
+    "get-cursor-position": "^1.0.5",
+    "inquirer": "^6.0.0",
+    "lodash": "^4.17.10",
+    "mkdirp": "^0.5.1",
+    "neo-async": "^2.5.1",
+    "on-new-line": "^1.0.0",
+    "opn": "^5.3.0",
+    "ora": "^3.0.0",
+    "prettysize": "^1.1.0",
+    "request": "^2.87.0",
+    "rimraf": "^2.6.2",
+    "standard": "^11.0.1",
+    "start-with": "^1.0.2",
+    "winston": "^3.0.0"
+  }
+}
