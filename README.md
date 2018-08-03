@@ -2,6 +2,8 @@
 
 Download all your facebook posts/photos/videos and save it into local disk
 
+![](./images/demo.gif)
+
 ## Prerequisite
 
 You have to create new Facebook app.
