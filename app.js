@@ -5,6 +5,7 @@ var common = require('./components/common')
 var constants = require('./components/constants')
 var initialize = require('./components/initialize')
 var authenticate = require('./components/authenticate')
+var photo = require('./components/photo')
 var video = require('./components/video')
 
 function createQuestions () {
@@ -38,6 +39,9 @@ function main () {
         break
       case constants.CMD_AUTHENTICATE:
         authenticate(fb, emitter)
+        break
+      case constants.CMD_PHOTO:
+        photo(fb)
         break
       case constants.CMD_VIDEO:
         video(fb)

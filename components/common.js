@@ -26,7 +26,10 @@ function shortenStr (str, maxLen = 30) {
 
 function makeFileName (id, title, source) {
   let ext = path.extname(url.parse(source).pathname)
-  let name = _.snakeCase(path.basename(`${id}_${title}`))
+  let name = `${id}`
+  if (title !== '') {
+    name = _.snakeCase(path.basename(`${name}_${title}`))
+  }
   return `${name}${ext}`
 }
 
@@ -68,13 +71,17 @@ async function graphApi (fb, endpoint, params, after = '') {
   try {
     res = await fb.api('', 'post', { batch: [{ relative_url: `${endpoint}?${params}` }] })
     if (!res || res.error) {
-      logger.info(`${res.error}`)
-      throw new Error(res.error)
+      logger.error(`${res.error.message}`)
+      throw new Error(res.error.message)
     }
   } catch (error) {
     throw new Error(error)
   }
   res = JSON.parse(res[0].body)
+  if (res.error) {
+    logger.error(`${res.error.message}`)
+    throw new Error(res.error.message)
+  }
   return res
 }
 

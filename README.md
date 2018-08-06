@@ -45,7 +45,7 @@ If you get an error when trying download data from Facebook such as `Error valid
 
 ### Download Photo
 
-- Choose `❯ Download Photo` to save all photos to folder 'downloads/photoss' on disk.
+- Choose `❯ Download Photo` to save all photos to folder 'downloads/photos' on disk.
 
 ### Download Video
 
